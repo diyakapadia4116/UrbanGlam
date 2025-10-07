@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpComing Sales</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(243,221,202); 
+            font-family: 'Georgia', serif; 
+            color: #4b2e2e;
+        }
+        header{
+            background-color: rgb(92, 64, 51);
+            padding: 20px 0; 
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        header h1{
+            font-family: 'Georgia', serif; 
+            font-size: 2.5em; 
+            color: rgb(245, 222, 179)
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header section -->
+        <header>
+            <h1>!!! Sales !!!</h1>
+        </header>
+        <!-- main section -->
+        <main>
+            <!-- Current Sales -->
+            <section style="padding: 20px 40px";>
+                <h2 style="text-align: center; color: rgb(128,0,32);">🛍️ Current Sales 🛍️</h2>
+                <ul style="font-size: 1.2em; line-height: 1.8; color: #4b2e2e;">
+                    <li><b>Summer Glam Sale</b> – Enjoy <i>30% off</i> on maxi dresses & linen sets (Ends: <b>July
+                            5</b>)</li>
+                    <li><b>Boss Babe Blazers</b> – Flat <i>20% off</i> on all formal blazers and matching trousers</li>
+                    <li><b>Trendy Tops Fest</b> – Buy 2, Get 1 Free on all crop tops and summer blouses</li>
+                    <li><b>Accessories Add-On</b> – Get a <i>free pearl clutch</i> with purchases above ₹3000</li>
+                </ul>
+                <br>
+                <p style="text-align: center; font-size: 1.1em; color: #8b3a62;"><i>Hurry, limited stock available.
+                        Offers valid till supplies last!</i></p>
+                <center>
+                    <br>
+                    <a href="shop.html" target="_blank">
+                        <input type="button" value="Shop Now!" style="background-color: rgb(145,95,109) ; border-radius: 40px; padding: 15px 40px; font-size: 20px;"> 
+                    </a>
+                </center>
+            </section>
+
+            <section style="padding: 20px 40px;">
+                <h2 style="text-align: center; color: rgb(128,0,32);">✨ Upcoming Sales ✨</h2>
+                <ul style="font-size: 1.2em; line-height: 1.8;">
+                    <li><b>Pink Perfection Sale</b> – <i>15% off</i> on all pink dresses (Starts: <b>July 5</b>)
+                    </li>
+                    <li><b>Mid-Year Luxe Clearance</b> – Up to <i>40% off</i> on premium blouses & skirts (Starts:
+                        <b>July 10</b>)
+                    </li>
+                    <li><b>Elegant Evenings Deal</b> – Buy 1 Get 1 on evening gowns (From: <b>July 15 - July 20</b>)
+                    </li>
+                    <li><b>Weekend Wardrobe Refresh</b> – Flat <i>25% off</i> on all tops (Every Weekend of July)
+                    </li>
+                </ul>
+            </section>
+            <section style = "text-align: center; padding: 30px;">
+                <h2 style="text-align: center; color: rgb(128,0,32);">Don't Miss Out!</h2><br>
+                <p style="font-size: 1.1em;">Join our newsletter to get early access and exclusive fashion deals.</p> <br>
+                <form onsubmit="return validateSale()">
+                    <input type="number" id = "number" placeholder="Enter your Phone number" style = "padding: 10px; width: 250px; border: none; border-radius: 10px;">
+                    <button type="submit" style="padding: 10px 20px; background-color: rgb(172, 139, 148); color: rgb(67, 21, 42); border: none; border-radius: 10px; margin-left: 10px;"> <b>Subscribe</b></button>
+                </form>
+                <script>
+                    function validateSale(){
+                        const number = document.getElementById("number").value.trim();
+                        const numberPattern = /^[6-9]\d{9}$/;
+                        if (!number.match(numberPattern)) {
+                            alert("Enter a valid Phone number!");
+                            return false;
+                        }
+                        alert("Phone number Saved!");
+                        window.location.href = "index.html";
+                        return false;
+                    }
+                </script>
+            </section>
+        </main>
+        <!-- footer section -->
+         <footer style="background-color: rgb(92,64,51); padding: 20px 0; text-align: center;">
+        <P style="color: rgb(245,222,179);">&copy;2025.<span style="color: rgb(245,222,179);"><b><i> UrbanGlam
+                        </i></b> All rights reserved.</span>
+            </P>
+    </footer>
+</body>
+
+</html>

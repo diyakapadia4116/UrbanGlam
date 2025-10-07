@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-ord - UrbanGlam</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f3ed;
+            color: #825151;
+        }
+        header{
+            background-color: #dfba9d;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        header h1{
+            text-align: left;
+            font-family: 'Georgia',serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        nav{
+            margin-top: 10px;
+        }
+        nav a{
+            color:rgb(182, 97, 97);
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        main h2{
+            text-align:center;
+            font-family: 'Georgia',serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgb(172, 139, 148); 
+            color: rgb(67, 21, 42);
+            border-radius: 20px;
+        }
+        .c1{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .co-ords img{
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border: #785d5d;
+            justify-items: center;
+        }
+    
+        .co-ords{
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            margin: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .co-ords:hover{
+            transform: scale(1.03);
+            box-shadow: rgba(0,0,0,0.1);
+        }
+        .co-ords h3{
+            text-align: center;
+            margin: 25px;
+            font-size: 20px;
+        }
+        .co-ords p{
+            text-align: center;
+            margin: 25px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        footer{
+            background-color: #785d5d;
+            padding: 5px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <h1>UrbanGlam</h1>
+        <nav style="text-align: right;">
+            <a href="shop.html" target="_blank">Shop</a>
+            <a href="cart.html" target="_blank">Cart</a>
+            <a href="index.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About Us</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+        </nav>
+    </header>
+    <!-- main section -->
+     <main>
+        <br>
+        <h2>Co-ord Sets</h2>
+        <br>
+        <section class="c1">
+            <div class = "co-ords">
+            <a href="01_coord.html"><img src="01_coord.jpg" alt="co-ord"></a>
+            <h3>Backless Co-ord Set</h3>
+            <p>$1490</p>
+        </div>
+        <div class = "co-ords">
+            <a href="02_coord.html"><img src="02_coords.jpg" alt="co-ord"></a>
+            <h3>Beachy White Co-ord Set</h3>
+            <p>$990</p>
+        </div>
+        <div class = "co-ords">
+            <a href="03_coord.html"><img src="03_coords.jpg" alt="co-ord"></a>
+            <h3>Magenta Buttoned Co-ord Set</h3>
+            <p>$1690</p>
+        </div>
+        <div class = "co-ords">
+            <a href="04_coord.html"><img src="04_coords.jpg" alt="co-ord"></a>
+            <h3>Sleevesless Bodycon Co-ord Set</h3>
+            <p>$1300</p>
+        </div>
+        <div class = "co-ords">
+            <a href="05_coord.html"><img src="05_coords.jpg" alt="co-ord"></a>
+            <h3>Ruffle Co-ord Set</h3>
+            <p>$850</p>
+        </div>
+        <div class = "co-ords">
+            <a href="06_coord.html"><img src="06_coords.jpg" alt="co-ord"></a>
+            <h3>White Short Co-ord Set</h3>
+            <p>$1750</p>
+        </div>
+        </section>
+        <script>
+            const products = [
+                {id: 1, name: "Backless Co-ord Set", price: 1490, img: "01_coord.jpg", link: "01_coord.html"},
+                {id: 2, name: "Beachy White Co-ord Set", price: 990, img: "02_coords.jpg", link: "02_coord.html"},
+                {id: 3, name: "Magenta Buttoned Co-ord Set", price: 1690, img: "03_coords.jpg", link: "03_coord.html"},
+                {id: 4, name: "Sleevesless Bodycon Co-ord Set", price: 1300, img: "04_coords.jpg", link: "04_coord.html"},
+                {id: 5, name: "Ruffle Co-ord Set", price: 850, img: "05_coords.jpg", link: "05_coord.html"},
+                {id: 6, name: "White Short Co-ord Set", price: 1750, img: "06_coords.jpg", link: "06_coord.html"},
+            ]
+
+            const container = document.getElementById("product_list");
+
+            products.forEach(p => {
+                const div = document.createElement("div");
+                div.className = "co-ords";
+                div.innerHTML = `
+                    <a href = "${p.link}">
+                        <img src="${p.img}" alt="${p.name}" width="350" height="350" style="object-fit:cover;">
+                    </a>
+                `;
+                container.appendChild(div);
+            });
+        </script>
+     </main>
+    <!-- footer section -->
+     <br>
+     <footer>
+        <center>
+            <p style="color: rgb(245,222,179);"><i>Match made in style – this co-ord set is effortlessly chic.</i></p>
+            <P style="color: rgb(245,222,179); margin: 5px 0;">&copy;2025.<span style="color: rgb(245,222,179);"><b><i>
+                            UrbanGlam
+                        </i></b> All rights reserved.</span>
+            </P>
+        </center>
+      </footer>
+</body>
+</html>

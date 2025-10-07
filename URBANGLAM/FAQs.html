@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - UrbanGlam</title>
+    <style>
+        .faq-item{
+            max-width: 700px;
+            margin: 0 auto;
+            background: linear-gradient(to right,#FAA0A0,#F8C8DC) ;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            color: black;
+            
+            padding: 20px;
+        }
+        
+        .question{
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+
+        .question::after{
+            content: '+';
+            position: absolute;
+            right: 0;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+
+        .question.active::after{
+            content: '-';
+        }
+
+        .answer{
+            display: none;
+            margin-top: 10px;
+        }
+
+        .answer.show{
+            display: block;
+        }
+
+        header>h1{
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(245, 228, 213); font-family: Georgia, serif; margin: 0; padding: 0; color: #4b2e2e;"> 
+    <!-- header section -->
+      <header style="background-color: rgb(92,64,51); padding: 10px 0; text-align: center;">
+            <h1 style="color: rgb(245,222,179)"><b><i> FAQs Sections </i></b></h1>
+            <p style="color: rgb(245,222,179); font-size: large;"><b><i>!! Ready to solve your every Queries!!</i></b></p>
+    </header>
+
+    <!-- main section -->
+     <main>
+        <center>
+            <hr color="#A9A9A9" width="100%">
+            <h1 align="left" style="color:rgb(111,78,55);"><b><i><center> Frequently Asked Questions </center></i></b></h1> <br>
+
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="question">What payment methods do you accept?</div>
+                    <div class="answer">We accept UPI, Credit/Debit Cards, Net Banking, and Cash on Delivery (COD).</div>
+                </div>
+                <br>
+                <div class="faq-item">
+                    <div class="question">How long does delivery take?</div>
+                    <div class="answer">Delivery usually takes 3 to 7 working days depending on your location.</div>
+                </div>
+               <br>
+                <div class="faq-item">
+                    <div class="question">Can I return or exchange an item?</div>
+                    <div class="answer">Yes! You can return or exchange an item within 7 days of delivery, as long as it meets our return policy conditions.</div>
+                </div>
+                <br>
+                <div class="faq-item">
+                    <div class="question">Is COD (Cash on Delivery) available?</div>
+                    <div class="answer">Yes, COD is available in selected pin codes. You’ll see the option at checkout if it’s applicable to your area.</div>
+                </div>
+                <br>
+                <div class="faq-item">
+                    <div class="question">How can I track my order?</div>
+                    <div class="answer">Once your order is shipped, you will receive a tracking link via SMS or email.</div>
+                </div>
+                <br>
+            </div>
+        </center>
+        <script src="faq_validation.js"></script>
+     </main>
+
+     <!-- footer section -->
+     <footer style="background-color: rgb(92,64,51); padding: 20px 0; text-align: center;">
+        <center>
+            <p style="color: rgb(245,222,179);"><i>To empower individuals through stylish clothing, celebrating uniqueness and self-expression. We stand for quality, creativity, and sustainability. </i></p>
+            <P style="color: rgb(245,222,179);">&copy;2025.<span style="color: rgb(245,222,179);"><b><i> UrbanGlam </i></b></span> All rights reserved.
+            </P>
+        </center>
+    </footer>
+</body>
+</html>

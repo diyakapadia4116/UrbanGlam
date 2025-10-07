@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottoms - UrbanGlam</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f3ed;
+            color: #825151;
+        }
+        header{
+            background-color: #dfba9d;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        header h1{
+            text-align: left;
+            font-family: 'Georgia',serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        nav{
+            margin-top: 10px;
+        }
+        nav a{
+            color:rgb(182, 97, 97);
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        main h2{
+            text-align:center;
+            font-family: 'Georgia',serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 20px;
+            padding: 10px;
+            background-color: rgb(172, 139, 148); 
+            color: rgb(67, 21, 42);
+            border-radius: 20px;
+        }
+        .c1{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .bottoms img{
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border: #785d5d;
+            justify-items: center;
+        }
+    
+        .bottoms{
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            margin: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .bottoms:hover{
+            transform: scale(1.03);
+            box-shadow: rgba(0,0,0,0.1);
+        }
+        .bottoms h3{
+            text-align: center;
+            margin: 25px;
+            font-size: 20px;
+        }
+        .bottoms p{
+            text-align: center;
+            margin: 25px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        footer{
+            background-color: #785d5d;
+            padding: 5px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <h1>UrbanGlam</h1>
+        <nav style="text-align: right;">
+            <a href="shop.html">Shop</a>
+            <a href="cart.html" target="_blank">Cart</a>
+            <a href="index.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About Us</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+        </nav>
+    </header>
+    <!-- main section -->
+     <main>
+        <br>
+        <h2>Bottoms</h2>
+        <br>
+        <section class="c1">
+            <div class = "bottoms">
+            <a href="01_bottoms.html"><img src="01_bottoms.jpg" alt="bottoms"></a>
+            <h3>Mermaid Bottoms</h3>
+            <p>$890</p>
+        </div>
+        <div class = "bottoms">
+            <a href="02_bottoms.html"><img src="02_bottoms.jpg" alt="bottoms"></a>
+            <h3>Brown Office Pants</h3>
+            <p>$780</p>
+        </div>
+        <div class = "bottoms">
+            <a href="03_bottoms.html"><img src="03_bottoms.jpg" alt="bottoms"></a>
+            <h3>Bow Black Bottoms</h3>
+            <p>$1150</p>
+        </div>
+        <div class = "bottoms">
+            <a href="04_bottoms.html"><img src="04_bottoms.jpg" alt="bottoms"></a>
+            <h3>Romantic Solid Long Bottoms</h3>
+            <p>$2100</p>
+        </div>
+       <div class = "bottoms">
+            <a href="05_bottoms.html"><img src="05_bottoms.jpg" alt="bottoms"></a>
+            <h3>TBlet Formal Shorts</h3>
+            <p>$450</p>
+        </div>
+        <div class = "bottoms">
+            <a href="06_bottoms.html"><img src="06_bottoms.jpg" alt="bottoms"></a>
+            <h3>Tied Mermaid Mesh Bottoms</h3>
+            <p>$950</p>
+        </div>
+        </section>
+        <script>
+  const products = [
+    { id: 1, name: "Mermaid Bottoms", price: 890, img: "01_bottoms.jpg", link: "01_bottoms.html" },
+    { id: 2, name: "Brown Office Pants", price: 780, img: "02_bottoms.jpg", link: "02_bottoms.html" },
+    { id: 3, name: "Bow Black Bottoms", price: 1150, img: "03_bottoms.jpg", link: "03_bottoms.html" },
+    { id: 4, name: "Romantic Solid Long Bottoms", price: 2100, img: "04_bottoms.jpg", link: "04_bottoms.html" },
+    { id: 5, name: "Blet Formal Shorts", price: 450, img: "05_bottoms.jpg", link: "05_bottoms.html" },
+    { id: 6, name: "Tied Mermaid Mesh Bottoms", price: 950, img: "06_bottoms.jpg", link: "06_bottoms.html" },
+]
+  const container = document.getElementById("product_list");
+
+  products.forEach(p => {
+    const div = document.createElement("div");
+    div.className = "bottoms";
+    div.innerHTML = `
+      <a href="${p.link}">
+        <img src="${p.img}" alt="${p.name}" width="350" height="350" style="object-fit:cover;">
+      </a>
+      <h3>${p.name}</h3>
+      <p>$${p.price}</p>
+    `;
+    container.appendChild(div);
+  });
+</script>
+     </main>
+    <!-- footer section -->
+     <br>
+     <footer>
+        <center>
+            <p style="color: rgb(245,222,179);"><i>From sleek pants to flowy skirts, UrbanGlam bottoms are made to move with you in style</i></p>
+            <P style="color: rgb(245,222,179); margin: 5px 0;">&copy;2025.<span style="color: rgb(245,222,179);"><b><i>
+                            UrbanGlam
+                        </i></b> All rights reserved.</span>
+            </P>
+        </center>
+      </footer>
+</body>
+</html>

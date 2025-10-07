@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage.com</title>
+    <style>
+         * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f3ed;
+            color: #4b2e2e;
+        }
+
+        header{
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(to right,#c9a785, #f3ddca);
+            padding: 25px 10px;
+            text-align: center;
+        }
+
+        header h1{
+            font-size: 3rem;
+            font-family: 'Georgia', serif;
+            color:#5c4033;
+        }
+
+        nav{
+            margin-top: 10px;
+        }
+
+        nav a{
+            color:rgb(165,42,42);
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        /* to change the color of link */
+        nav a:hover {
+            color: #4b2e2e;
+            text-shadow: 1px 1px #d3b6a3;
+        }
+        main{
+            background-color: rgb(193,154,107);
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        main img{
+            width: 90%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.4s ease;
+        }
+
+        /* to zoom image on click*/
+        main img :hover{
+            transform: scale(1.02s);
+        }
+
+        .content{
+            background-color: #fffaf4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h2{
+            color: rgb(123,63,0);
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .content p{
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .content a{
+            text-decoration: none;
+            color: rgb(124,48,48);
+            padding: 10px 20px;
+            border: 2px solid #7b2f2f;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .content a :hover{
+            background-color: #7b2f2f;
+            color: #fff;     
+        }
+
+        footer{
+            background-color: #f3ddca;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5a3b2d;
+        }
+        footer span{
+            color: rgb(111,78,55);
+            font-weight: bold;
+        }
+        hr{
+            height: 1px;
+            background-color: #c2a58c;
+            width: 100%;
+            margin: 20px auto;
+            border: none;
+        }
+
+        @media (max-width: 600px){
+            nav a{
+                display: block;
+                margin: 8px 0;
+            }
+            main img{
+                width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <h1>UrbanGlam</h1>
+            <nav>
+                <a href="index.html" target="_blank">Home</a> |
+                <a href="login.html" target="_blank">Login/Signup</a> |
+                <a href="about.html" target="_blank">About</a> |
+                <a href="shop.html" target="_blank">Shop</a> |
+                <a href="sale.html" target="_blank">Upcoming sale</a> |
+                <a href="contact.html" target="_blank">Contact Us</a> |
+                <a href="cart.html" target="_blank" >Cart</a> |
+                <a href="FAQs.html" target="_blank" >FAQs</a> 
+            </nav>
+        <hr>
+    </header>
+
+    <!-- main section -->
+    <main>
+            <img src="https://t4.ftcdn.net/jpg/06/31/87/85/360_F_631878582_ILpxEaHvq6JaAXNUOdfNcvf5XttwYxGE.jpg"
+                alt="image">
+    </main>
+        <div class="content">
+            <hr>
+            <h2>!! Fashion Stoppers !!</h2>
+            <p><b>One-stop fashion destination for classy looks!</b></p>
+            <a href="shop.html"><b><i>Explore our new arrivals and hot deals!</i></b></a>
+    </div>
+    <!-- footer section -->
+    <footer>
+        <center>
+            <hr color="#A9A9A9" width="100%">
+            <P>&copy;2025.<span><b><i> UrbanGlam </i></b></span> All rights reserved.
+            </P>
+        </center>
+    </footer>
+</body>
+</html>
