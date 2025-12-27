@@ -2,76 +2,184 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - UrbanGlam</title>
+  <meta charset="UTF-8">~
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - UrbanGlam</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5d7b3;
+      color: #4a3f35;
+    }
+
+    header {
+      background-color: #6b3e2e;
+      color: #fff5e1;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 22px;
+    }
+
+    header h1 {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-size: 36px;
+    }
+
+    header p {
+      color: #ffe5b4;
+      font-size: 16px;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px 0;
+    }
+
+    form {
+      background-color: #eec4b1;
+      border-radius: 20px;
+      padding: 40px;
+      width: 60%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    form h2 {
+      text-align: center;
+      color: #5c2b1c;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 10px;
+      background-color: #fff7f0;
+      font-size: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: #6b3e2e;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #8b5742;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #6b3e2e;
+      color: #fff5e1;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    table {
+      width: 70%;
+      color: #fff5e1;
+      margin-bottom: 10px;
+    }
+
+    th {
+      text-align: left;
+      font-size: 18px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    hr {
+      border: 0;
+      height: 2px;
+      background: #6b3e2e;
+      margin: 0;
+    }
+  </style>
 </head>
 
-<!-- Header Section -->
-<header>
-    <h1 align="center"><b><i> Contact Us </i></b></h1>
-    <p><b><i><u>We’re just a message away — let’s connect and make something beautiful together.</u></i></b></p>
-</header>
-<br>
-<hr>
+<body>
 
-<!-- Main Section -->
-<main>
-    <br>
-    <div align="right">
-        <form method="post" onsubmit="return validateContact()" align="left">
-            <h2>
-                <center>We’d love to hear from you!❤️</center>
-            </h2>
-            <label for="name"><b>Name</b></label><br>
-            <input type="text" id="name" placeholder="Enter your name"><br><br>
-            <label for="email"><b>Email</b></label><br>
-            <input type="email" id="email" placeholder="Enter your Email ID"><br><br>
-            <label for="reviews"><b>Reviews</b></label><br>
-            <textarea placeholder="Enter your reviews here..." id="text"></textarea><br><br><br>
-            <center>
-                <input type="submit" value="Submit">
-            </center>
-        </form>
-        <script src="contact_validation.js"></script>
-        <br>
-    </div>
-</main>
+  <!-- Header Section -->
+  <header>
+    <h1>✨ Contact Us ✨</h1>
+    <p>💌 We’re just a message away — let’s connect and make something beautiful together. 💫</p>
+  </header>
 
-<!-- Footer Section -->
-<hr>
-<br>
-<footer>
+  <!-- Main Section -->
+  <main>
+    <form method="post" onsubmit="return validateContact()">
+      <h2>We’d love to hear from you! ❤️</h2>
+      <label for="name">Name</label><br>
+      <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" placeholder="Enter your Email ID"><br><br>
+
+      <label for="reviews">Reviews</label><br>
+      <textarea id="text" placeholder="Enter your reviews here..." rows="5"></textarea><br><br>
+
+      <center>
+        <input type="submit" value="Submit">
+      </center>
+    </form>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
     <center>
-        <table>
-            <thead>
-                <tr>
-                    <th><i>Contact Information</i></th>
-                    <th><i>Support Hours:</i></th>
-                </tr>
-            </thead>
+      <table>
+        <thead>
+          <tr>
+            <th><i>Contact Information</i></th>
+            <th><i>Support Hours:</i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul>
+                <li><b>Email:</b> support@urbanglam.com</li>
+                <li><b>Phone:</b> +91-9998190337</li>
+                <li><b>Address:</b> 123 Fashion Street, Mumbai, India</li>
+              </ul>
+            </td>
+            <td valign="top">
+              <ul>
+                <li>Monday - Saturday: 10:00 AM to 6:00 PM IST</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+    <p>&copy;2025. <b><i>UrbanGlam</i></b> All rights reserved.</p>
+  </footer>
 
-            <tbody>
-                <tr>
-                    <td>
-                        <ul>
-                            <li><b>Email:</b> support@urbanglam.com</li>
-                            <li><b>Phone:</b> +91-9998190337</li>
-                            <li><b>Address:</b> 123 Fashion Street, Mumbai, India</li>
-                        </ul>
-                    </td>
-                    <td valign="top">
-                        <ul>
-                            <li>Monday - Saturday: 10:00 AM to 6:00 PM IST</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </center>
-    <center>
-        <p>&copy;2025. <b><i>UrbanGlam</i></b> All rights reserved.</p>
-    </center>
-</footer>
+  <script src="contact_validation.js"></script>
 </body>
 </html>
